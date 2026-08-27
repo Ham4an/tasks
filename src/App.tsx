@@ -12,6 +12,19 @@ function App(): React.JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
+            <h1>This is header text</h1>
+
+            <ul>
+                <li>First thing</li>
+                <li>Another thing</li>
+                <li>A third item</li>
+            </ul>
+
+            <ol>
+                <li>First thing</li>
+                <li>Another thing</li>
+                <li>A third item</li>
+            </ol>
         </div>
     );
 }
