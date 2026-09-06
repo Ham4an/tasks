@@ -126,6 +126,7 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
         ...oldQuestion,
         id: id,
         name: "Copy of " + oldQuestion.name,
+        options: [...oldQuestion.options],
         published: false,
     };
 }
@@ -160,6 +161,7 @@ export function mergeQuestion(
         points: points,
         id: id,
         name: name,
+        options: [...contentQuestion.options],
         published: false,
     };
 }
