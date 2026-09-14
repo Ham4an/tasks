@@ -15,7 +15,7 @@ import {
     renameQuestionById,
     changeQuestionTypeById,
     editOption,
-    duplicateQuestionInArray,
+    duplicateQuestionInArray
 } from "./nested";
 import testQuestionData from "./data/questions.json";
 import backupQuestionData from "./data/questions.json";
@@ -25,7 +25,7 @@ const {
     SIMPLE_QUESTIONS,
     TRIVIA_QUESTIONS,
     EMPTY_QUESTIONS,
-    SIMPLE_QUESTIONS_2,
+    SIMPLE_QUESTIONS_2
 }: Record<string, Question[]> =
     // Typecast the test data that we imported to be a record matching
     //  strings to the question list
@@ -37,7 +37,7 @@ const {
     SIMPLE_QUESTIONS: BACKUP_SIMPLE_QUESTIONS,
     TRIVIA_QUESTIONS: BACKUP_TRIVIA_QUESTIONS,
     EMPTY_QUESTIONS: BACKUP_EMPTY_QUESTIONS,
-    SIMPLE_QUESTIONS_2: BACKUP_SIMPLE_QUESTIONS_2,
+    SIMPLE_QUESTIONS_2: BACKUP_SIMPLE_QUESTIONS_2
 }: Record<string, Question[]> = backupQuestionData as Record<
     string,
     Question[]
@@ -76,7 +76,7 @@ describe("Testing the Question[] functions", () => {
     //////////////////////////////////
     // getPublishedQuestions
 
-    test("(3 pts) Testing the getPublishedQuestions function", () => {
+    test("Testing the getPublishedQuestions function", () => {
         expect(getPublishedQuestions(BLANK_QUESTIONS)).toEqual([]);
         expect(getPublishedQuestions(SIMPLE_QUESTIONS)).toEqual([
             {
@@ -168,7 +168,7 @@ describe("Testing the Question[] functions", () => {
                 options: ["correct", "it is", "not"],
                 expected: "correct",
                 points: 5,
-                published: true,
+                published: true
             },
             {
                 id: 2,
@@ -198,12 +198,12 @@ describe("Testing the Question[] functions", () => {
                 options: [],
                 expected: "Even this one is not empty",
                 points: 5,
-                published: true,
-            },
+                published: true
+            }
         ]);
     });
 
-    test("(3 pts) Testing the findQuestion function", () => {
+    test("Testing the findQuestion function", () => {
         expect(findQuestion(BLANK_QUESTIONS, 1)).toEqual(BLANK_QUESTIONS[0]);
         expect(findQuestion(BLANK_QUESTIONS, 47)).toEqual(BLANK_QUESTIONS[1]);
         expect(findQuestion(BLANK_QUESTIONS, 2)).toEqual(BLANK_QUESTIONS[2]);
@@ -219,7 +219,7 @@ describe("Testing the Question[] functions", () => {
         expect(findQuestion([], 0)).toEqual(null);
     });
 
-    test("(3 pts) Testing the removeQuestion", () => {
+    test("Testing the removeQuestion", () => {
         expect(removeQuestion(BLANK_QUESTIONS, 1)).toEqual([
             {
                 id: 47,
